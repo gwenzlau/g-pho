@@ -13,7 +13,7 @@ locations = {
   :kc   => [39.12, 94.60]
 }
 
-image = File.open(File.join(Rails.root, "public", "heroku.png"))
+image = File.open(File.join(Rails.root, "public"))
 
 locations.values.each do |coordinate|
   Photo.create(:lat => coordinate[0], :lng => coordinate[1], :image => image)
